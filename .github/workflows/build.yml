@@ -30,6 +30,7 @@ jobs:
           python3 -m venv venv
           venv/bin/python -m pip install --upgrade pip setuptools wheel
           venv/bin/python -m pip install --no-user buildozer cython==0.29.36
+          echo "PIP_USER=0" >> $GITHUB_ENV
           echo "$PWD/venv/bin" >> $GITHUB_PATH
 
       - name: Build APK
